@@ -1,0 +1,18 @@
+[package]
+name = "actix-todos"
+version = "0.1.0"
+authors = ["K-onrad <g.konrad@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-rt = "~1"
+actix-web = "~2"
+serde = { version = "~1", features = ["derive"] }
+dotenv = "~0.15"
+config = "~0.10"
+tokio-pg-mapper = "~0.1"
+tokio-pg-mapper-derive = "~0.1"
+deadpool-postgres = "~0.5"
+tokio-postgres = "~0.5"

@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS todos;
+DROP TABLE IF EXISTS todo_lists;
+
+CREATE TABLE todo_lists (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(80) NOT NULL
+);
+
+CREATE TABLE todos (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(80) NOT NULL,
+  checked BOOLEAN NOT NULL DEFAULT false,
+  list_id INTEGER REFERENCES todo_lists(id) ON DELETE RESTRICT
+);
